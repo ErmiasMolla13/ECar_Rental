@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@keyframes slideRightToCenter {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-30px); /* Move to the center */
+  }
+}
+
+.animate-slideRightToCenter {
+  animation: slideRightToCenter 3s linear forwards; /* Use "forwards" to keep the final state */
+}
+.ant-message {
+  z-index: 10000 !important;
+}
+
+.Toastify__toast-container {
+  z-index: 999999 !important;
+  position: fixed !important;
+}
+
+.Toastify__toast {
+  position: relative !important;
+  z-index: 999999 !important;
+}
