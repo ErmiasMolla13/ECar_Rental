@@ -12,18 +12,6 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `er_car_rent`
---
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `admin`
 --
 
@@ -43,22 +31,6 @@ CREATE TABLE `admin` (
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `admin2`
---
-
-CREATE TABLE `admin2` (
-  `admin_id` int(11) NOT NULL,
-  `admin_name` varchar(100) NOT NULL,
-  `contact` varchar(15) NOT NULL,
-  `adrress` varchar(25) NOT NULL,
-  `username` varchar(25) NOT NULL,
-  `paassword` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `bookings`
 --
 
@@ -469,6 +441,4 @@ ALTER TABLE `payment`
   ADD CONSTRAINT `payment_ibfk_2` FOREIGN KEY (`rent_id`) REFERENCES `rent` (`rent_id`);
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
